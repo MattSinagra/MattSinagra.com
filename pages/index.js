@@ -1,12 +1,13 @@
 import Head from "next/head"
-import { Component } from 'react'
+import { Component } from 'react';
+import Layout from '../components/layout'
 import { attributes, react as HomeContent } from '../content/home.md';
 
 export default class Home extends Component {
   render() {
     let { title, cats } = attributes;
     return (
-      <>
+      <Layout>
         <Head>
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
@@ -22,7 +23,7 @@ export default class Home extends Component {
             ))}
           </ul>
         </article>
-      </>
+      </Layout>
     )
   }
 }
